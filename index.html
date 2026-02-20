@@ -298,6 +298,105 @@
       font-style: italic;
     }
 
+    /* ── Ubicacion ──────────────────────────────────────── */
+    .ubicacion-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3rem;
+    }
+
+    .ubicacion-card {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+      background: var(--cream-light);
+      border-radius: var(--radius);
+      padding: 2rem 2.4rem;
+    }
+
+    @media (max-width: 600px) {
+      .ubicacion-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.6rem 1.4rem;
+        gap: 1.2rem;
+      }
+    }
+
+    .ubicacion-icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      background: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px var(--shadow);
+    }
+
+    .ubicacion-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--cafe-medium);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ubicacion-text {
+      flex: 1;
+    }
+
+    .ubicacion-text h3 {
+      font-family: 'Ibarra Real Nova', serif;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--cafe-dark);
+      margin-bottom: .3rem;
+    }
+
+    .ubicacion-text p {
+      font-size: .95rem;
+      color: var(--cafe-light);
+      line-height: 1.5;
+    }
+
+    .ubicacion-btn {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: var(--cafe-medium);
+      color: var(--white);
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .85rem;
+      font-weight: 600;
+      letter-spacing: .02em;
+      text-decoration: none;
+      padding: .65rem 1.3rem;
+      border-radius: 30px;
+      transition: background var(--transition), transform var(--transition);
+      white-space: nowrap;
+    }
+
+    .ubicacion-btn:hover {
+      background: var(--cafe-dark);
+      transform: translateY(-2px);
+    }
+
+    .ubicacion-btn svg {
+      width: 15px;
+      height: 15px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
     /* ── Scrollbar ─────────────────────────────────────── */
     .modal::-webkit-scrollbar { width: 6px; }
     .modal::-webkit-scrollbar-track { background: transparent; }
@@ -379,6 +478,25 @@
   <h2 class="section-title">Pasteleria Regional</h2>
   <div class="section-line"></div>
   <div class="grid" id="grid-pasteleria"></div>
+</section>
+
+<!-- ═══════════════ UBICACION ═══════════════ -->
+<section class="ubicacion-section">
+  <h2 class="section-title">¿Dónde estamos?</h2>
+  <div class="section-line"></div>
+  <div class="ubicacion-card">
+    <div class="ubicacion-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+    </div>
+    <div class="ubicacion-text">
+      <h3>Cafe del Cedro</h3>
+      <p>Encuéntranos en nuestra ubicación</p>
+    </div>
+    <a class="ubicacion-btn" href="https://share.google/1Kdpk2k1qzzy52piH" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      Cómo llegar
+    </a>
+  </div>
 </section>
 
 <footer>Cafe del Cedro &middot; Hecho con amor y buen cafe</footer>
