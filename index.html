@@ -448,6 +448,13 @@
   <div class="grid" id="grid-pasteleria"></div>
 </section>
 
+<!-- ═══════════════ cafes ═══════════════ -->
+<section class="menu-section">
+  <h2 class="section-title">Café Tostado</h2>
+  <div class="section-line"></div>
+  <div class="grid" id="grid-cafe"></div>
+</section>
+
 <!-- ═══════════════ UBICACION FLOTANTE ═══════════════ -->
 <div class="location-wrap">
   <span class="location-label">¿Dónde estamos?</span>
@@ -501,7 +508,7 @@ const products = [
   {
     section: 'bebidas',
     name: 'Americano del Cedro',
-    price: '$4.000',
+    price: '$5.000',
     img: 'americano.jpeg',
     imgLg: 'americano.jpeg',
     desc: 'Nuestro expreso diluido con agua caliente filtrada, revelando un cuerpo sedoso y matices florales sutiles. Suave al paladar, honesto en sabor, ideal para acompanar una buena conversacion.'
@@ -509,7 +516,7 @@ const products = [
   {
     section: 'bebidas',
     name: 'Frappe del Cedro',
-    price: '$8.000',
+    price: '$9.000',
     img: 'frappe.jpeg',
     imgLg: 'frappe.jpeg',
     desc: 'Expreso coronado con una generosa nube de crema batida artesanal y un toque de cacao en polvo. La elegancia europea se encuentra con la calidez de nuestro grano colombiano.'
@@ -559,7 +566,7 @@ const products = [
   {
     section: 'pasteleria',
     name: 'Pasteles de Yuca',
-    price: '$4.000',
+    price: '$4.500',
     img: 'pastel.jpeg',
     imgLg: 'pastel.jpeg',
     imgPos: 'top',
@@ -568,17 +575,45 @@ const products = [
   {
     section: 'pasteleria',
     name: 'Galletas del Cedro',
-    price: '$9.000',
+    price: '$6.000',
     img: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600&h=450&fit=crop&q=80',
     imgLg: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=960&h=720&fit=crop&q=80',
     desc: 'Galletas artesanales elaboradas con cacao de alta calidad, mantequilla de primera y generosos trozos de chocolate amargo. Crujientes en los bordes, con un corazon suave y fundente que se derrite en el paladar. Una caricia dulce con esencia de cedro, perfectas para acompanar tu bebida favorita.'
+  },
+  {
+    section: 'pasteleria',
+    name: 'torta de vino',
+    price: '$8.000',
+    img: 'Torta.jpg',
+    imgLg: 'Torta.jpg',
+    desc: 'estas es una torta de vino'
+  },
+  /* ── cafe ── */
+  {
+    section: 'cafe',
+    name: 'cafe tostado libra',
+    price: '$40.000',
+    img: 'cafe01.jpeg',
+    imgLg: 'cafe01.jpeg',
+    desc: 'Cultivado a 1.640 msnm, este café de variedad Castillo ofrece una taza equilibrada y aromática, resultado de condiciones óptimas de altura y clima. Su tostión media resalta notas suaves, con una acidez media brillante y un cuerpo sedoso que lo hace ideal para disfrutar a cualquier hora del día.'
+
+  },
+  {
+    section: 'cafe',
+    name: 'cafe tostado media libra',
+    price: '$22.000',
+    img: 'cafe01.jpeg',
+    imgLg: 'cafe01.jpeg',
+    desc: 'Cultivado a 1.640 msnm, este café de variedad Castillo ofrece una taza equilibrada y aromática, resultado de condiciones óptimas de altura y clima. Su tostión media resalta notas suaves, con una acidez media brillante y un cuerpo sedoso que lo hace ideal para disfrutar a cualquier hora del día.'
   }
+  
 ];
 
 /* ── Render Cards ─────────────────────────────────── */
 function renderCards() {
   const gridBebidas = document.getElementById('grid-bebidas');
   const gridPasteleria = document.getElementById('grid-pasteleria');
+  const gridCafe = document.getElementById('grid-cafe');
 
   products.forEach((p, i) => {
     const card = document.createElement('article');
@@ -600,8 +635,13 @@ function renderCards() {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(i); }
     });
 
-    if (p.section === 'bebidas') gridBebidas.appendChild(card);
-    else gridPasteleria.appendChild(card);
+    if (p.section === 'bebidas') {
+      gridBebidas.appendChild(card);
+    } else if (p.section === 'cafe') {
+      gridCafe.appendChild(card);
+    } else {
+      gridPasteleria.appendChild(card);
+    }
   });
 }
 
