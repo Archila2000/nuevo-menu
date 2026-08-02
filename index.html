@@ -436,24 +436,22 @@
 
 <!-- ═══════════════ BEBIDAS ═══════════════ -->
 <section class="menu-section">
-  <h2 class="section-title">Bebidas</h2>
+  <h2 class="section-title">Bebidas Del Cedro</h2>
   <div class="section-line"></div>
   <div class="grid" id="grid-bebidas"></div>
 </section>
 
 <!-- ═══════════════ PASTELERIA ═══════════════ -->
 <section class="menu-section">
-  <h2 class="section-title">Pasteleria Regional</h2>
+  <h2 class="section-title">Cocina Del Cedro</h2>
   <div class="section-line"></div>
   <div class="grid" id="grid-pasteleria"></div>
 </section>
 
-<!-- ═══════════════ cafes ═══════════════ -->
+<!-- ═══════════════ cafés ═══════════════ -->
 <section class="menu-section">
   <h2 class="section-title">Café Tostado</h2>
-  <div class="section-line"></div>
-  <div class="grid" id="grid-cafe"></div>
-</section>
+  <h3 class="pitch">café de especialidad tostado, molido o en pepa con proceso Honey o lavado</h3>
 
 <!-- ═══════════════ UBICACION FLOTANTE ═══════════════ -->
 <div class="location-wrap">
@@ -516,7 +514,15 @@ const products = [
   {
     section: 'bebidas',
     name: 'Frappe del Cedro',
-    price: '$9.000',
+    price: '$10.000',
+    img: 'frappe.jpeg',
+    imgLg: 'frappe.jpeg',
+    desc: 'Expreso coronado con una generosa nube de crema batida artesanal y un toque de cacao en polvo. La elegancia europea se encuentra con la calidez de nuestro grano colombiano.'
+  },
+  {
+    section: 'bebidas',
+    name: 'Afogato del Cedro',
+    price: '$10.000',
     img: 'frappe.jpeg',
     imgLg: 'frappe.jpeg',
     desc: 'Expreso coronado con una generosa nube de crema batida artesanal y un toque de cacao en polvo. La elegancia europea se encuentra con la calidez de nuestro grano colombiano.'
@@ -532,7 +538,24 @@ const products = [
   },
   {
     section: 'bebidas',
+    name: 'Mocaccino del Cedro',
+    price: '$8.000',
+    img: 'capuccino.jpeg',
+    imgLg: 'capuccino.jpeg',
+    imgPos: '50% 30%',
+    desc: 'Espuma de leche cremosa abrazando un doble expreso, creando capas de textura y sabor. Cada taza es un pequeno ritual de equilibrio perfecto entre fuerza y suavidad.'
+  },
+  {
+    section: 'bebidas',
     name: 'Jugo de Frutas',
+    price: '$7.000',
+    img: 'https://images.unsplash.com/photo-1546173159-315724a31696?w=600&h=450&fit=crop&q=80',
+    imgLg: 'https://images.unsplash.com/photo-1546173159-315724a31696?w=960&h=720&fit=crop&q=80',
+    desc: 'Jugos naturales preparados al momento con frutas frescas de la region. Elige entre nuestras variedades: fresa, mora, mango, maracuya, limonada, guayaba o lulo. Cada vaso es un sorbo de frescura tropical, lleno de vitaminas y del sabor genuino de la tierra colombiana.'
+  },
+   {
+    section: 'bebidas',
+    name: 'Limonada Fria',
     price: '$7.000',
     img: 'https://images.unsplash.com/photo-1546173159-315724a31696?w=600&h=450&fit=crop&q=80',
     imgLg: 'https://images.unsplash.com/photo-1546173159-315724a31696?w=960&h=720&fit=crop&q=80',
@@ -557,21 +580,39 @@ const products = [
   /* ── Pasteleria ── */
   {
     section: 'pasteleria',
-    name: 'Tamales Santandereanos',
-    price: '$12.000',
+    name: 'Pizza Artesanal De Masa Madre',
+    price: '$30.000',
     img: "tamal.jpeg",
     imgLg: 'tamal.jpeg',
     desc: 'Masa de arroz sazonada envuelta en hoja de platano, rellena con cerdo adobado, garbanzo y especias ancestrales. Cocidos lentamente al vapor, guardan el alma de la cocina santandereana en cada bocado.'
   },
-  {
+ {
     section: 'pasteleria',
-    name: 'Pasteles de Yuca',
-    price: '$4.500',
+    name: 'Lasagna Del Cedro 460g',
+    price: '$30.000',
     img: 'pastel.jpeg',
     imgLg: 'pastel.jpeg',
     imgPos: 'top',
-    desc: 'Crujientes por fuera, tiernos por dentro. Yuca fresca rallada y rellena de carne guisada con hogao casero, fritos hasta alcanzar un dorado perfecto. Tradicion que se siente en cada mordisco.'
-  },
+    desc: 'Crujientes por fuera, tiernos por dentro...'
+},
+{
+    section: 'pasteleria',
+    name: 'Lasagna Del Cedro 250g',
+    price: '$18.000',
+    img: 'pastel.jpeg',
+    imgLg: 'pastel.jpeg',
+    imgPos: 'top',
+    desc: 'Crujientes por fuera, tiernos por dentro...'
+},
+{
+    section: 'pasteleria',
+    name: 'Burrito De Pollo En Salsa Agridulce',
+    price: '$30.000',
+    img: 'pastel.jpeg',
+    imgLg: 'pastel.jpeg',
+    imgPos: 'top',
+    desc: 'Crujientes por fuera, tiernos por dentro...'
+},
   {
     section: 'pasteleria',
     name: 'Galletas del Cedro',
